@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITC Computers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ITC Computers</h1>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-choose">Why Choose Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Computer Sales</h3>
+                    <p>Explore our wide range of computers, laptops, and accessories.</p>
+                </div>
+                <div class="service">
+                    <h3>Technical Support</h3>
+                    <p>Get expert technical support whenever you need it.</p>
+                </div>
+                <div class="service">
+                    <h3>Basic Computer Courses</h3>
+                    <p>Enroll in our beginner-friendly computer courses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br />
+    <br />
+    <br />
+
+    <section id="why-choose" class="bg-gray">
+        <div class="container">
+            <h2>Why Choose ITC Computers?</h2>
+            <ul>
+                <li>Quality Products</li>
+                <li>Expert Support</li>
+                <li>Affordable Prices</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Contact us today to learn more about our services or visit our store.</p>
+            <address>
+                university of sialkot<br>
+                Phone: 0306-6257172<br>
+                Email: 22201001-012@uskt.edu.pk
+            </address>
+        </div>
+    </footer>
+    @{
+        ViewBag.Title = "Index";
+    }
+
+    <h2>@ViewBag.Title.</h2>
+
+    <!-- Display TempData -->
+    @if (TempData["Message"] != null)
+    {
+        <div>
+            <strong>TempData:</strong> @TempData["Message"]
+        </div>
+    }
+
+    <!-- Display ViewData -->
+    @if (ViewData["Greeting"] != null)
+    {
+        <div>
+            <strong>ViewData:</strong> @ViewData["Greeting"]
+        </div>
+    }
+
+    <!-- Display ViewBag -->
+    @if (ViewBag.Welcome != null)
+    {
+        <div>
+            <strong>ViewBag:</strong> @ViewBag.Welcome
+        </div>
+    }
+</body>
+</html>
